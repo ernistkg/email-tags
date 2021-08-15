@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
@@ -35,4 +35,81 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.email-list {
+  list-style-type: none;
+  display: inline-block;
+  background: white;
+  padding-left: 0;
+  max-width: 800px;
+}
+
+.email-list .email-item, .email-input-container {
+  padding: 0 2px 0;
+  margin: 3px;
+  line-height: 30px;
+  color: black;
+  float: left;
+}
+
+.email-list .email-input-container {
+  position: relative;
+}
+
+.email-list .email-item .email-tag {
+  padding: 2px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.email-list .email-item .email-tag:hover {
+  background-color: lightgrey;
+}
+
+.email-list .email-item .email-tag.invalid {
+  background-color: #ff88b8;
+}
+
+.email-list .email-item .email-tag .remove-item {
+  display: none;
+}
+
+.email-list .email-item .email-tag:hover .remove-item {
+  display: inline-block;
+  padding-left: 5px;
+  cursor: pointer ;
+}
+
+.email-input {
+  margin: 3px;
+  min-width: 200px;
+  height: 25px;
+  border: none;
+  padding: 0;
+  font-size: calc(10px + 1vmin);
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+#autocomplete-dropdown {
+  position: absolute;
+  top: 35px;
+  left: -3px;
+  background-color: white;
+  cursor: pointer;
+  max-height: 300px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#autocomplete-dropdown .autocomplete-option {
+  border-bottom: 1px solid grey;
+  padding-left: 5px;
+}
+
+#autocomplete-dropdown .autocomplete-option:hover {
+  background-color: darkgrey;
 }
